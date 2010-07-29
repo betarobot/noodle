@@ -1,0 +1,11 @@
+NOOD.ORG THEMES
+
+BASE AND FREE THEME LICENSING:
+
+- PHP, CSS, images and js files my nood.org are licensed under GPL v2
+- Some js/jquery files may have different (but GPL compatible) licensing. Please check file headers.
+
+CUSTOM AND STOCK THEME LICENSING:
+
+- base theme license as described above
+- stock (sub)theme CSS, images, some JS are under copyright by nood.org

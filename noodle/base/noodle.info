@@ -1,0 +1,47 @@
+name = noodorg base
+description = Tableless multi-column base theme by nood.org.
+version = VERSION
+core = 6.x
+engine = phptemplate
+
+
+stylesheets[all][] = base.css
+
+regions[message_top] = header messages
+
+regions[header_top] = header top
+regions[header_blocks_1] = header blocks 1
+regions[header_blocks_2] = header blocks 2
+regions[header_blocks_3] = header blocks 3
+regions[header_bottom] = header bottom
+
+regions[content_top] = content top
+regions[content_inside] = inside node
+regions[content_bottom] = content bottom
+
+
+regions[sidebar_top] = sidebar top
+regions[sidebar_accordion] = sidebar accordion
+regions[sidebar_bottom] = sidebar bottom
+
+
+regions[footer_top] = footer top
+regions[footer_blocks_1] = footer blocks 1
+regions[footer_blocks_2] = footer blocks 2
+regions[footer_blocks_3] = footer blocks 3
+regions[footer_bottom] = footer bottom
+
+regions[message_bottom] = footer messages
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = mission
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = search
+features[] = favicon
+features[] = primary_links
+features[] = secondary_links
+
+project = "noodle"

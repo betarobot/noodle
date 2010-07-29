@@ -1,0 +1,1296 @@
+/*
+Theme Name: noodle
+Theme URI: http://www.nood.org/
+Description: base theme exlusive for nood.org
+Version: 6.1.1
+Author: Andrey Pshenichny
+Author URI: http://andreys.info/
+*/
+
+/* @group reset */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, abbr, acronym, address, big, cite, dl, dd, del, dfn, font, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, ol, ul, li, menu, fieldset, form, label, legend, input, textarea, table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+	
+/* @end */
+
+/* @group clear */
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+
+
+/* @end */
+
+/* @group html elements */
+
+h1 {
+	line-height: 1em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	font-size: 2.5em;
+}
+
+h2 {
+	line-height: 1em;
+	font-size: 1.7em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+h3 {
+	font-size: 1.5em;
+	line-height: 1em;
+	padding-top: 0.4em;
+	padding-bottom: 0.4em;
+}
+
+h4 {
+	font-size: 1.3em;
+	line-height: 1em;
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+}
+
+p {
+	padding: 0 0 1em;
+	margin: 0;
+	line-height: 1.5em;
+}
+
+ul,
+ol {
+	margin-left: 1.5em;
+	padding-bottom: 1em;
+}
+
+li {
+	line-height: 1.5em;
+}
+
+dl,
+dd {
+	padding-bottom: 1em;
+}
+
+dt {
+	padding-bottom: 0.5em;
+	font-size: 1.3em;
+}
+
+code,
+pre,
+kbr {
+	background: #eee;
+	font-family: Courier, monospace;
+}
+
+blockquote {
+	font-style: italic;
+	padding-left: 3em;
+	padding-right: 1em;
+}
+
+small {
+	font-size: small;
+}
+
+/* @group tables */
+
+table {
+	overflow: auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	display: block;
+	border-collapse: collapse;
+}
+
+table td {
+	padding: 0.5em;
+}
+
+table th, table th.active {
+	border-bottom: 2px solid #ddd;
+	text-transform: uppercase;
+	font-weight: bold;
+	background-color: #f7f7f7;
+}
+
+table tr.odd, table tr.odd .active {
+	border-top-style: none;
+	border-bottom: none;
+	background-color: #fff;
+}
+
+table tr.even, table tr.even .active {
+	border-top-style: none;
+	border-bottom: none;
+	background-color: #f7f7f7;
+}
+
+table .active {
+	background-color: inherit;
+}
+
+
+
+/* @end */
+
+/* @group forms */
+
+form {
+	padding: 6px 0;
+	clear: both;
+}
+
+form label {
+	color: #777;
+}
+
+form fieldset {
+	border: 0 none;
+}
+
+fieldset {
+	border: 1px dotted #505050;
+	margin-bottom: 10px;
+	border-width: 0;
+}
+
+fieldset legend {
+	color: #f60;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	font-weight: normal;
+	font-style: normal;
+}
+
+fieldset legend a,
+.node .content fieldset legend a {
+	color: #f60;
+	font-weight: normal;
+	font-style: normal;
+}
+
+html.js fieldset.collapsed {
+	border-bottom-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+	margin-bottom: 0;
+	height: 2em;
+}
+
+html.js fieldset.collapsible legend a {
+	padding-left: 15px;
+	background: url(img/menu-expanded.png) no-repeat 5px center;
+}
+
+html.js fieldset.collapsed legend a {
+	background-image: url(img/menu-collapsed.png);
+	background-position: 5px center;
+}
+
+.form-item {
+	margin: 0.5em 0;
+}
+
+.form-item .description {
+	font-size: small;
+}
+
+span.form-required {
+ 	color: #f60;
+	font-weight: bold;
+}
+
+.container-inline div,
+.container-inline label {
+	display: block;
+}
+
+input.form-text,
+input.form-password,
+input.form-file {
+	padding: 3px 0px;
+	background-color: #fbfbfb;
+	border: 1px solid #ddd;
+	font: 1em/inherit inherit;
+	height: 1.21em;
+}
+
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	background-color: #fbfbfb;
+	border: 1px solid #ddd;
+}
+
+.resizable-textarea {
+	margin-bottom: 1em;
+}
+
+.resizable-textarea .grippie {
+	background-color: #ddd;
+}
+
+fieldset input.form-text,
+fieldset input.form-password,
+input.form-file,
+textarea {
+	background-color: #fdfdfd;
+}
+
+input.form-text:focus,
+input.form-password:focus,
+input.form-file:focus,
+textarea:focus {
+	border: 1px solid #aaa!important;
+	background-color: #fff;
+}
+
+input.form-text,
+input.form-password,
+input.form-file {
+	width: 95%;
+}
+
+select {
+	padding: 2px 0;
+}
+
+input.form-button,
+input.form-submit,
+input.teaser-button {
+	margin: 0 5px 0 0;
+	background: url(img/button-sq-bg.png) repeat-x top left;
+	border: 1px solid #ddd;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 1em;
+	line-height: inherit;
+	padding: 1px 5px;
+	height: 1.8em;
+}
+
+input.form-button:hover,
+input.form-submit:hover,
+input.form-button:focus,
+input.form-submit:focus {
+	border-color: #aaa!important;
+}
+
+html.js input.form-autocomplete {
+	background-position: 100% 6px;
+}
+
+html.js input.throbbing {
+	background-position: 100% -14px;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group layout */
+
+body {
+	padding: 0;
+	margin: 0;
+	font: 0.88em/1.5em 'Lucida Grande', LucidaGrande, Lucida, Helvetica, Arial, sans-serif;
+	color: #333;
+	background-color: #fff;
+}
+
+#header,
+#content-container,
+#footer {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#footer-wrapper {
+	padding-bottom: 2em;
+	padding-top: 1.5em;
+}
+
+#footer {
+}
+
+#header-top,
+#header-bottom,
+#footer-top,
+#footer-bottom,
+#footer-message {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#header-top,
+#footer-top {
+	padding-bottom: 1em;
+}
+
+#header-bottom,
+#footer-bottom {
+	padding-top: 1em;
+}
+
+#content {
+	width: 600px;
+	float: left;
+	padding-left: 15px;
+	padding-right: 15px;
+	overflow: hidden;
+}
+
+#content-bottom {
+	float: left;
+	margin-top: 1em;
+}
+
+#content-bottom .block {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding-bottom: 0;
+	width: 100%;
+	float: left;
+}
+
+#content-sidebar-right {
+	width: 300px;
+	float: left;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#header-blocks-1,
+#header-blocks-2,
+#header-blocks-3,
+#footer-blocks-1,
+#footer-blocks-2,
+#footer-blocks-3 {
+	float: left;
+	width: 290px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+
+
+/* @end */
+
+/* @group links */
+
+a {
+	color: #555;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #555;
+	text-decoration: underline;
+}
+	
+/* @end */
+
+/* @group container */
+
+.xml-icon {
+	padding: 10px 0px 10px 0px;
+}
+
+a.rss-icon {
+	background: url(img/feed.png) no-repeat left center;
+	display: block;
+	height: 16px;
+	line-height: 16px;
+	padding: 0 0px 0 22px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	float: left;
+	clear: both;
+}
+
+.block-region {
+	background-color: #c3ffa3;
+}
+
+.logo {
+	float: left;
+}
+
+.breadcrumb {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	text-transform: lowercase;
+}
+
+/* @group blocks */
+
+.block {
+	padding-top: 0.3em;
+	padding-bottom: 1em;
+	overflow: hidden;
+}
+
+.block h2 {
+	padding-top: 0;
+	padding-bottom: 0;
+	line-height: 1.5em;
+}
+
+.block .content h2 {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	line-height: 1em;
+}
+
+
+
+/* @end */
+
+/* @group accordion */
+
+#sidebar-accordion h2 {
+	background: url(img/menu-collapsed.png) no-repeat left center;
+	padding-left: 15px;
+}
+
+/* @end */
+
+/* @group menu, item-list */
+
+.item-list ul {
+	padding-left: 0;
+	margin: 0;
+}
+.item-list ul li {
+	padding: 0 0.5em 0 1em;
+	margin: 0;
+	background: url(img/menu-leaf.png) no-repeat 0 0.5em;
+	display: block;
+}
+
+ul li,
+ul.menu li,
+.item-list ul li,
+li.leaf {
+	list-style-type: none;
+	list-style-image: none;
+}
+
+ul.menu ul,
+ul.menu ul ul{
+	margin: 0;
+	padding: 0;
+}
+
+ul.menu {
+	margin: 0;
+	padding: 0;
+}
+
+ul.menu li {
+	padding: 0 0.5em 0 1em;
+	margin: 0;
+	display: block;
+	list-style-type: none;
+}
+
+li.expanded {
+	padding: 0 0.5em 0 1em;
+	margin: 0;
+	background: url(img/menu-expanded.png) no-repeat 0 0.5em;
+}
+
+li.collapsed {
+	padding: 0 0.5em 0 1em;
+	margin: 0;
+	background: url(img/menu-collapsed.png) no-repeat 0 0.5em;
+}
+
+li.leaf {
+	padding: 0 0.5em 0 1em;
+	margin: 0;
+	background: url(img/menu-leaf.png) no-repeat 0 0.5em;
+}
+	
+/* @end */
+
+/* @group footer menus */
+
+#footer-bottom ul.menu {
+	padding-left: 0;
+	display: block;
+}
+
+#footer-bottom ul.menu li {
+	padding-left: 0;
+	margin-left: 0;
+	display: block;
+	float: left;
+}
+
+#footer-bottom ul.menu li a {
+	font-weight: bold;
+	border-right: 2px solid #777;
+	padding-right: 4px;
+	line-height: 1em;
+}
+
+#footer-bottom ul.menu li.last a {
+	border-right-style: none;
+}
+
+/* @end */
+
+/* @group footer message */
+
+#message-bottom {
+	border-top: 3px solid #ddd;
+	background: #f7f7f7;
+	float: left;
+}
+
+#message-bottom .block{
+	padding: 1em 1em 0;
+}
+
+.close-meerkat,
+.forget-meerkat {
+	float: right;
+	padding: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: #ddd;
+	font-size: small;
+	line-height: 1em;
+	display: inline-block;
+	cursor: pointer;
+}
+
+/* @end */
+
+/* @group navigation */
+
+#navigation-primary {
+	float: right;
+	padding-top: 1em;
+}
+
+ul.links,
+ul.links li {
+	padding-left: 0;
+	text-align: left;
+}
+
+/* @end */
+
+/* @group search */
+
+.block-search label {
+	display: none;
+}
+
+.block-search .form-text {
+	width: 65%;
+	float: left;
+	margin-right: 5px;
+}
+
+.block-search .form-submit {
+	width: 30%;
+	margin-right: 0;
+}
+
+/* @end */
+
+/* @group box */
+
+.box h2 {
+	clear: both;
+}
+
+.box .content {
+	margin-bottom: 1em;
+}
+
+.box .description {
+	font-size: small;
+	clear: both;
+}
+
+/* @end */
+
+/* @group pager */
+
+ul.pager {
+	background-color: #f7f7f7;
+	margin-left: 0;
+	margin-top: 1em;
+	display: inline-block;
+	width: 100%;
+	padding: 0;
+	border: 2px solid #ddd;
+}
+
+.item-list .pager {
+	text-align: left;
+}
+
+.item-list .pager li {
+	margin: 0;
+	padding: 0 0.3em;
+}
+
+/* @end */
+
+/* @group help, messages, admin */
+
+.help {
+	clear: both;	
+	background-color: #f7f7f7;
+	padding: 0.5em;
+	color: #555;
+	border: 3px solid #ddd;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+.help p {
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+}
+
+.help a {
+	color: #777;
+	font-weight: bold;
+}
+
+.help code,
+.help pre,
+.help kbr {
+	background: #bbb;
+}
+
+#message {
+}
+
+div.messages.error {
+	padding: 0.5em 0.5em 0.5em 3em;
+	border-style: none;
+	border-bottom: 3px solid #555;
+	background: #ffaba4 url(img/messages-error.png) no-repeat 7px 7px;
+}
+
+div.messages.warning {
+	padding: 0.5em 0.5em 0.5em 3em;
+	border-style: none;
+	border-bottom: 3px solid #555;
+	background: #ffd5a4 url(img/messages-asterisk.png) no-repeat 7px 7px;
+}
+
+div.messages.status {
+	padding: 0.5em 0.5em 0.5em 3em;
+	border-style: none;
+	border-bottom: 3px solid #555;
+	background: #c3ffa3 url(img/messages-info.png) no-repeat 7px 7px;
+}
+
+.messages a {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.admin-list dt {
+	margin-top: 0.5em;
+	font-size: 1.2em;
+}
+
+div.admin .left,
+div.admin .right,
+div.admin-panel,
+div.admin-panel .body {
+	padding: 0;
+	margin: 0;
+}
+
+/* @end */
+
+/* @group admin */
+
+/* @group dblog */
+
+tr.dblog-user,
+tr.dblog-user .active  {
+	background: #ffd;
+}
+
+tr.dblog-content,
+tr.dblog-content .active {
+	background: #fffee9;
+}
+
+tr.dblog-page-not-found,
+tr.dblog-access-denied,
+tr.dblog-page-not-found .active,
+tr.dblog-access-denied .active {
+	background: #f3fcdb;
+}
+
+tr.dblog-error,
+tr.dblog-error .active {
+	background: #fce8dd;
+}
+
+/* @end */
+
+/* @group block edit */
+
+div.view div.views-admin-links ul,
+div.view div.views-admin-links li {
+	line-height: 2em;
+}
+
+div.block-edit-link,
+div.view div.views-admin-links,
+div.view div.views-admin-links:hover {
+	font-size: xx-small;
+	padding: 0 0 0 5px;
+	position: absolute;
+	z-index: 40;
+	display: none;
+	border: 3px solid #fff;
+	margin-top: -2em;
+	background-color: #555;
+	opacity: 0.85;
+	width: auto;
+	height: 2em;
+	line-height: 2em;
+}
+
+div.block-edit-link a,
+div.view div.views-admin-links li a {
+	text-decoration: none;
+	color: #eee;
+	font-size: xx-small;
+	float: left;
+	padding-right: 5px;
+}
+
+div.block-edit-link a:hover,
+div.view div.views-admin-links li a:hover {
+	color: #ff9900;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group tabs */
+
+#tabs {
+	margin-bottom: 1em;
+	font-size: small;
+	display: inline-block;
+	border-left: 5px solid #ddd;
+	padding-left: 0.5em;
+	width: 98%;
+}
+
+ul.primary {
+	text-transform: lowercase;
+	padding: 0;
+	clear: both;
+	margin: 0;
+	border-bottom-style: none;
+}
+
+ul.primary li {
+	border-style: none;
+	padding: 0 5px 0 0;
+	float: left;
+	display: inline-block;
+	margin: 2px 0;
+}
+
+ul.primary li a {
+	margin-left: 0;
+	margin-right: 0;
+	color: #fff;
+	background: #aaa;
+	border: 1px solid #ddd;
+	padding: 0 5px;
+}
+
+ul.primary li a:hover {
+	color: #eee;
+	background: #888;
+}
+
+ul.primary li a.active,
+ul.primary li.active a {
+	background: #f60;
+	color: #fff;
+	border: 1px solid #ddd;
+}
+
+ul.primary li a.active:hover {
+	color: #ffdcbf;
+}
+
+ul.secondary {	
+	text-transform: lowercase;
+	border-bottom-style: none;
+	clear: both;
+	border-top: 1px solid #ddd;
+	margin: 0;
+	padding: 2px 0 0;
+}
+
+ul.secondary li {
+	display: inline-block;
+	border-style: none;
+	padding: 0 5px 0 0;
+	float: left;
+	margin: 2px 0;
+}
+
+ul.secondary li a {
+	margin: 0 5px 0 0;
+	color: #777;
+	padding: 0 5px 0 5px;
+	background: #f7f7f7;
+	border: 1px solid #ddd;
+}
+
+ul.secondary li a:hover {
+	background: #ddd;
+}
+
+ul.secondary li a.active {
+	color: #f60;
+	border: 1px solid #ddd;
+}
+
+ul.secondary li a.active:hover {
+	color: #f60;
+}
+
+/* @end */
+	
+/* @end */
+
+/* @group node */
+
+.node.teaser {
+	margin-bottom: 2em;
+	float: left;
+}
+
+.node .submitted {
+	font-size: small;
+	color: #777;
+}
+
+.node .content a {
+	font-weight: bold;
+}
+
+.title-alt {
+	color: #777;
+}
+
+.node .info {
+	display: block;
+	width: 100%;
+	clear: both;
+}
+	
+/* @end */
+
+/* @group comments */
+
+#comments,
+#comments h2 {
+	display: block;
+	clear: both;
+}
+
+#comments .indented {
+	padding-left: 1em;
+	margin-left: 1em;
+}
+
+#comments .comment {
+	float: left;
+	width: 100%;
+	clear: both;
+	margin-bottom: 2em;
+}
+
+.comment {
+	clear: both;
+}
+
+.comment h2 {
+	font-size: 1em;
+	display: inline-block;
+	padding-bottom: 1em;
+	padding-top: 0;
+}
+
+.comment .comment-content {
+	padding: 1em 1em 0;
+	border: 1px solid #d5d5d5;
+	border-collapse: collapse;
+}
+
+.comment .comment-author {
+	float: left;
+	padding-top: 0.5em;
+	padding-left: 3em;
+	background: url(img/comment-bubbles.png) no-repeat 1em;
+}
+
+.comment .comment-author .picture {
+	float: left;
+	padding-bottom: 0;
+	padding-left: 1em;
+	margin-top: 5px;
+}
+
+.comment .comment-author .picture img {
+	width: 30px;
+	height: 30px;
+}
+
+.comment .comment-author .submitted {
+	padding-left: 1em;
+	padding-bottom: 0;
+	display: block;
+	font-size: small;
+	float: left;
+}
+
+.comment div.links {
+	float: right;
+	font-size: small;
+	padding-top: 0.5em;
+}
+
+.comment .comment_reply a,
+.comment_add {
+	font-weight: bold;
+}
+
+.comment .new {
+	background: #f60;
+	color: #fff;
+	line-height: 1em;
+	font-size: small;
+	padding: 3px 5px 5px;
+	float: right;
+}
+
+.comment .unpublished {
+	background: #aaa;
+	color: #fff;
+	line-height: 1em;
+	font-size: small;
+	padding: 3px 5px 5px;
+	float: right;
+}
+
+.comment.comment-author-wrapper .comment-content  {
+	background: #f7f7f7;
+}
+
+.comment.comment-unpublished-wrapper .comment-content  {
+	background: #ddd;
+}
+
+.comment-folded {
+	line-height: 2em;
+	background: url(img/menu-collapsed.png) no-repeat left center;
+	padding-left: 1em;
+}
+
+.comment-folded .subject {
+	font-weight: bold;
+}
+
+#comments .container-inline {
+	margin: 5px 0 0;
+}
+
+#comments .container-inline .form-item {
+	float: left;
+	margin: 0;
+	padding-right: 5px;
+}
+
+#comments .container-inline .form-submit {
+	float: left;
+	margin: 0;
+}
+
+/* @group comment form */
+
+#comments h2 .comment-hide {
+	background: url(img/menu-collapsed.png) no-repeat left center;
+	padding-left: 15px;
+}
+
+#comments .box,
+#comments #comment-form,
+#comment-form .form-text,
+#comment-form .resizable-textarea {
+	display: inline-block;
+	width: 99%;
+}
+
+#comment-form .comment-left {
+	width: 45%;
+	display: inline-block;
+	padding-right: 1em;
+	float: left;
+	overflow: hidden;
+}
+
+#comment-form .comment-right {
+	width: 45%;
+	float: right;
+	display: inline-block;
+	padding-left: 1em;
+	overflow: hidden;
+}
+
+#comment-form .comment-wide {
+	width: 99%;
+	display: inline-block;
+	clear: both;
+}
+
+/* @end */
+	
+/* @end */
+
+/* @group user / profile */
+
+#user-login-form {
+  text-align: left;
+}
+
+.profile h3 {
+  border-bottom: none;
+}
+
+.profile dl,
+.profile dd {
+	padding-bottom: 0;
+}
+
+/* @end */
+
+/* @group book */
+
+.book-navigation {
+	margin-bottom: 1em;
+	text-align: left;
+	border: 1px solid #d5d5d5;
+	background: #f7f7f7;
+}
+
+.content .book-navigation a {
+	font-weight: normal;
+	font-style: normal;
+}
+
+.book-navigation h3 {
+	padding-left: 0.5em;
+}
+
+.book-navigation .page-links {
+	text-align: left;
+	border-top: none;
+	border-bottom: none;
+}
+
+.book-navigation .menu {
+	border-top: none;
+	border-bottom: none;
+	padding: 0 0.5em 0.5em;
+}
+
+/* @end */
+
+/* @group forum */
+
+#forum tr td.forum {
+	padding-left: 50px;
+	background-position: 10px center;
+	background-image: url(img/forum-default.png);
+	background-repeat: no-repeat;
+}
+
+#forum tr td.forum .indent {
+	margin-left: 0;
+}
+
+#forum tr.new-topics td.forum {
+	background-image: url(img/forum-new.png);
+}
+
+#forum .name {
+	font-size: 1.5em;
+	margin: 0.5em 0;
+}
+
+#forum .description {
+	margin: 0.5em 0;
+	font-size: 1em;
+}
+
+#forum .last-reply,
+#forum .created {
+	font-size: small;
+}
+
+#forum table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#forum tbody {
+	border: none;
+}
+
+#forum th {
+	text-transform: uppercase;
+}
+
+#forum table tr {
+	border-collapse: collapse;
+	width: 100%;
+	border-bottom-style: none;
+}
+
+#forum table td.container,
+#forum table td.forum,
+#forum table td.title {
+	width: 100%;
+}
+
+#forum table td {
+	padding: 5px;
+	border-collapse: collapse;
+}
+
+.forum-topic-navigation {
+	margin-bottom: 1em;
+	text-align: left;
+	border: 1px solid #d5d5d5;
+	padding-top: 0;
+	background: #f7f7f7;
+}
+
+.forum-topic-navigation .topic-previous {
+  text-align: left;
+  float: left;
+  width: 46%;
+}
+
+.forum-topic-navigation .topic-next {
+  text-align: right;
+  float: right;
+  width: 46%;
+}
+
+.node.forum {
+	float: left;
+	margin-bottom: 2em;
+	width: 100%;
+}
+
+/* @end */
+
+/* @group poll */
+
+.poll .bar .foreground {
+	background-color: #555;
+}
+
+.poll .bar {
+	background-color: #ddd;
+}
+
+.poll .links {
+	text-align: left;
+}
+
+/* @end */
+
+/* @group modules */
+
+/* @group CCK */
+
+/* @end */
+
+/* @group BUEditor */
+
+.editor-container {
+	background-color: #ddd;
+	margin: 0px;
+	float: left;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.editor-text-button:hover,
+.editor-image-button:hover {
+  border-color: #aaa;
+}
+
+/* @end */
+
+/* @end */
