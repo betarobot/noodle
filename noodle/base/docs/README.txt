@@ -26,6 +26,20 @@ More:
 - additional page class with domain name
 - ... TBC (to-do)
 
-MORE INFO AND DOCS:
 
-Just check noodle/base/docs
+INSTALLATION:
+
+Just put the whole noodle 'noodle' folder under your themes directory of choice (say /sites/all/themes/). Enable the base theme or any of the subthemes.
+
+TIP: do rearrange your blocks to fit in new block regions. If you don't see navigation just go to http://YOURSITE.COM/admin/build/block
+
+
+DIRECTORY STRUCTURE:
+
+[themes-folder]
+-/noodle
+--/base (base theme, don't delete)
+---/img (images for base theme)
+---/doc (documentation)
+--/subtheme
+---/img (images for your theme)

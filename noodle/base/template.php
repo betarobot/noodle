@@ -8,7 +8,7 @@ function noodle_preprocess_page(&$vars) {
 
 	if (user_access('administer blocks')) {
 	//	drupal_add_js(path_to_theme()  .'/block_edit.js', 'theme');
-		drupal_add_js(drupal_get_path('theme', 'noodle') .'/block_edit.js', 'theme');
+		drupal_add_js(drupal_get_path('theme', 'noodle') .'/block-edit.js', 'theme');
 	}
 
 	// let's add switchtarget.js if the sidebar accordion region is populated 
@@ -22,7 +22,7 @@ function noodle_preprocess_page(&$vars) {
 	}
 	
 	// grid support
-	// drupal_add_css(drupal_get_path('theme', 'noodle') .'/grid-12.css', 'theme');
+	// drupal_add_css(drupal_get_path('theme', 'noodle') .'/grid-12.css', 'theme');	
 
 	$vars['styles'] = drupal_get_css();
 	$vars['scripts'] = drupal_get_js();

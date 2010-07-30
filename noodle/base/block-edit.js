@@ -1,5 +1,3 @@
-// $Id: block_edit.js,v 1.1.2.9 2009/09/22 16:30:47 psynaptic Exp $
-
 Drupal.behaviors.block_edit = function (context) {
 
   var regexp = new RegExp(/block-(.+?)-(.+?)/mi);
