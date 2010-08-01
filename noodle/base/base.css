@@ -568,6 +568,7 @@ li.leaf {
 	margin-left: 0;
 	display: block;
 	float: left;
+	background-image: none;
 }
 
 #footer-bottom ul.menu li a {
@@ -1128,6 +1129,16 @@ ul.secondary li a.active:hover {
 .profile dl,
 .profile dd {
 	padding-bottom: 0;
+}
+
+.picture {
+	float: right;
+	margin-left: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.picture img {
+	border: 2px solid #ddd;
 }
 
 /* @end */

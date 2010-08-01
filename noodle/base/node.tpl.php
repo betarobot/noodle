@@ -7,7 +7,7 @@
 		<?php if ($submitted): ?>
 			<div class="info submitted"><?php print $submitted ?></div>
 		<?php endif; ?>
-
+		
 		<?php print $picture ?>
 		
 		<div class="content"><?php print $content ?></div>
@@ -26,8 +26,10 @@
 		<?php endif; ?>
 
 		<?php if ($links): ?>
-			<div class="links">
-				<div id=""><?php print $links ?></div>
+			<div class="info">
+				<div class="links">
+					<div><?php print $links ?></div>
+				</div>
 			</div>
 		<?php endif; ?>
 

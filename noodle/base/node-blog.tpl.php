@@ -9,11 +9,11 @@
 		<?php endif; ?>
 
 		<?php print $picture ?>
-		
+
 		<div class="content"><?php print $content ?></div>
-		
+
 		<div class="clear"></div>
-		
+
 		<?php if ($terms): ?>
 			<div class="info">
 				<div class="links">
@@ -26,8 +26,10 @@
 		<?php endif; ?>
 
 		<?php if ($links): ?>
-			<div class="links">
-				<div id=""><?php print $links ?></div>
+			<div class="info">
+				<div class="links">
+					<div><?php print $links ?></div>
+				</div>
 			</div>
 		<?php endif; ?>
 

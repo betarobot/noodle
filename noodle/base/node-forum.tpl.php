@@ -13,8 +13,10 @@
 		<div class="clear"></div>
 
 		<?php if ($links): ?>
-			<div class="links">
-				<div id=""><?php print $links ?></div>
+			<div class="info">
+				<div class="links">
+					<div><?php print $links ?></div>
+				</div>
 			</div>
 		<?php endif; ?>
 

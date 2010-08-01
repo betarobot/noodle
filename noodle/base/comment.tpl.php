@@ -30,7 +30,9 @@
 		</div>
 		
 		<div class="comment-author">
-			<?php print $picture ?>
+			<?php if ($picture): ?>
+				<?php print $picture ?>
+			<?php endif; ?>
 			<div class="submitted"><?php print $author ?> <br /> <?php print $date ?></div>
 		</div>
 		<div class="links"><?php print $links ?></div>		
@@ -65,7 +67,9 @@
 		</div>
 		
 		<div class="comment-author">
-			<?php print $picture ?>
+			<?php if ($picture): ?>
+				<?php print $picture ?>
+			<?php endif; ?>
 			<div class="submitted"><?php print $author ?> <br /> <?php print $date ?></div>
 		</div>
 		<div class="links"><?php print $links ?></div>

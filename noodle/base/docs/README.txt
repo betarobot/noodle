@@ -6,6 +6,10 @@ CONCEPT:
 
 This theme is targeted primarily for developers and themers. The theme was developed to allow rapid creation of custom (sub)themes. It includes basic styles and features which I found to be useful on majority of projects over years: from less complicated blogs to more complex corporate sites. Compared to many existing Drupal theme frameworks it works right away, it is lightweight, there are no zillion of settings to obey. Actually, I believe the majority of theme setting should be hardcoded anyway not to allow final user to ruin the original design. Yep I'm a Mac boy ;)
 
+BROWSER COMPATIBILITY:
+
+IE (6,7,8), WebKit (Safari, Chrome), Mozilla (FireFox, Camino, SeaMonkey), Opera (8,9,10). The theme also was created to support older mobile browsers and screen readers.
+
 FEATURES:
 
 Blocks:
