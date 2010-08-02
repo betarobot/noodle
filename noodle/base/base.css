@@ -97,8 +97,9 @@ p {
 
 ul,
 ol {
-	margin-left: 1.5em;
 	padding-bottom: 1em;
+	list-style-position: outside;
+	margin-left: 1.6em;
 }
 
 li {
@@ -503,6 +504,7 @@ a.rss-icon {
 	padding-left: 0;
 	margin: 0;
 }
+
 .item-list ul li {
 	padding: 0 0.5em 0 1em;
 	margin: 0;
@@ -510,7 +512,6 @@ a.rss-icon {
 	display: block;
 }
 
-ul li,
 ul.menu li,
 .item-list ul li,
 li.leaf {
