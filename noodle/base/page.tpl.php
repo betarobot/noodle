@@ -58,22 +58,28 @@ $(document).ready(function(){
 <div id="page-wrapper" class="<?php //--- quite a nice feature to have: servername helps to style multisite installs ?><?php print str_replace('.', '-', $_SERVER['SERVER_NAME']); ?> user-<?php if (user_is_logged_in()) {print "loggedin";} else {print "anonymous";}?>">
 
 	<?php //--------- message top ---------- ?>
-	<div id="message-top">
 
-		<?php //--- not sure where to put this on yet ?>
-		<?php if ($messages != ""): ?> 
-			<div id="message"><?php print $messages ?></div> 
-		<?php endif; ?>
-
-	</div>
+	<?php if ($message_top || $messages) : ?> 
+		<div id="message-top">
+	
+			<?php if ($messages != ""): ?> 
+				<div id="message"><?php print $messages ?></div> 
+			<?php endif; ?>
+			
+			<?php if ($message_top) : ?> 
+					<?php print $message_top;?>
+			<?php endif; ?>
+	
+		</div>
+	<?php endif; ?>
 
 	<div class="clear"></div>
 
 	<?php //--------- header ---------- ?>
 	<div id="header-wrapper">
 		<div id="header">
-			<div id="header-top">
 
+			<div id="header-navigation">
 				<?php if ($logo): ?>
 					<div class="logo"><a href="<?php print url(); ?>" title="<?php print($site_name) ?>"><img src="<?php print $logo; ?>" alt="logo" /></a></div>
 				<?php endif; ?>
@@ -81,14 +87,14 @@ $(document).ready(function(){
 				<?php if ($primary_links): ?>
 					<div id="navigation-primary"><?php print theme('links', $primary_links, array('class' =>'links', 'id' => 'navlist')) ?></div>
 				<?php endif; ?>
-				
-				<?php if ($header_top) : ?>
-					<div class="clear"></div>
-					<?php print $header_top;?>
-				<?php endif; ?>
-					
-				<div class="clear"></div>
 			</div>
+	
+			<div class="clear"></div>
+				
+			<?php if ($header_top) : ?>
+				<div id="header-top"><?php print $header_top;?></div>
+				<div class="clear"></div>
+			<?php endif; ?>
 			
 			<?php if ($header_blocks_1) : ?> 
 				<div id="header-blocks-1"><?php print $header_blocks_1;?></div>
@@ -214,8 +220,8 @@ $(document).ready(function(){
 	<?php if ($message_bottom) : ?> 
 		<div id="message-bottom">
 
-			<div class="close-meerkat"><?php print t('close');?></div>
-			<div class="forget-meerkat"><?php print t('forget');?></div>
+			<span class="close-meerkat"><?php print t('close');?></span>
+			<span class="forget-meerkat"><?php print t('forget');?></span>
 
 			<?php print $message_bottom;?>
 

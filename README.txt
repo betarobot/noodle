@@ -1,5 +1,7 @@
 READ ME FOR NOODLE THEME (BASE THEME BY NOOD.ORG)
 
+IMPORTANT: This theme is currently in beta. Please don't use for production. Some changes may ruin your subtheme. Release is scheduled for mid August 2010.
+
 This theme is for Drupal v.6
 
 CONCEPT:
@@ -29,6 +31,10 @@ More:
 - any menu has its own CSS class (even in blocks)
 - additional page class with domain name (helpful for multi-domain setups)
 - ... TBC (to-do)
+
+DEMO:
+
+The beta demo is quite messy yet, but it is here: http://themes.nood.org/
 
 MORE INFO AND DOCS:
 
