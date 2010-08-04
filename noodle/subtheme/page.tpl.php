@@ -10,7 +10,7 @@
 <?php print $styles ?>
 <?php print $scripts ?>
 
-<?php if ($message_bottom || $sidebar_accordion) : ?> 
+<?php if ($message_bottom || $sidebar_accordion) : ?>
 <script type="text/javascript">
 
 $(document).ready(function(){
@@ -25,7 +25,7 @@ $(document).ready(function(){
 			animationSpeed: 500
 		});
 	<?php endif; ?>
-	
+
 	<?php if ($sidebar_accordion) : ?>
 		$(".accordionlink").switchTarget({
 		   effect : 'sliding',
@@ -39,7 +39,6 @@ $(document).ready(function(){
 </script>
 <?php endif; ?>
 
-
 <meta http-equiv="imagetoolbar" content="no" />
 <meta http-equiv="pragma" content="no-cache" />
 <meta http-equiv="cache-control" content="no-cache" />
@@ -48,66 +47,69 @@ $(document).ready(function(){
 <?php //--- shall we change it to something else? say slogan? ?>
 <meta name="description" content="<?php print check_plain($mission) ?>" />
 
-
 </head>
 
-<body> 
+<body>
 
-
-	
-<div id="page-wrapper" class="<?php //--- quite a nice feature to have: servername helps to style multisite installs ?><?php print str_replace('.', '-', $_SERVER['SERVER_NAME']); ?> user-<?php if (user_is_logged_in()) {print "loggedin";} else {print "anonymous";}?>">
+<div id="page-wrapper" class="<?php print str_replace('.', '-', $_SERVER['SERVER_NAME']); ?> user-<?php if (user_is_logged_in()) {print "loggedin";} else {print "anonymous";}?>">
 
 	<?php //--------- message top ---------- ?>
-	<div id="message-top">
 
-		<?php //--- not sure where to put this on yet ?>
-		<?php if ($messages != ""): ?> 
-			<div id="message"><?php print $messages ?></div> 
-		<?php endif; ?>
+	<?php if ($message_top || $messages) : ?>
+		<div id="message-top">
 
-	</div>
+			<?php if ($messages != ""): ?>
+				<div id="message"><?php print $messages ?></div>
+			<?php endif; ?>
+
+			<?php if ($message_top) : ?>
+					<?php print $message_top;?>
+			<?php endif; ?>
+
+		</div>
+	<?php endif; ?>
 
 	<div class="clear"></div>
 
 	<?php //--------- header ---------- ?>
 	<div id="header-wrapper">
 		<div id="header">
-			<div id="header-top">
 
+			<div id="header-navigation">
 				<?php if ($logo): ?>
 					<div class="logo"><a href="<?php print url(); ?>" title="<?php print($site_name) ?>"><img src="<?php print $logo; ?>" alt="logo" /></a></div>
 				<?php endif; ?>
-		
+
 				<?php if ($primary_links): ?>
 					<div id="navigation-primary"><?php print theme('links', $primary_links, array('class' =>'links', 'id' => 'navlist')) ?></div>
 				<?php endif; ?>
-				
-				<?php if ($header_top) : ?>
-					<div class="clear"></div>
-					<?php print $header_top;?>
-				<?php endif; ?>
-					
-				<div class="clear"></div>
 			</div>
-			
-			<?php if ($header_blocks_1) : ?> 
+
+			<div class="clear"></div>
+
+			<?php if ($header_top) : ?>
+				<div id="header-top"><?php print $header_top;?></div>
+				<div class="clear"></div>
+			<?php endif; ?>
+
+			<?php if ($header_blocks_1) : ?>
 				<div id="header-blocks-1"><?php print $header_blocks_1;?></div>
 			<?php endif; ?>
-			
-			<?php if ($header_blocks_2) : ?> 
+
+			<?php if ($header_blocks_2) : ?>
 				<div id="header-blocks-2"><?php print $header_blocks_2;?></div>
 			<?php endif; ?>
-			
-			<?php if ($header_blocks_3) : ?> 
+
+			<?php if ($header_blocks_3) : ?>
 				<div id="header-blocks-3"><?php print $header_blocks_3;?></div>
 			<?php endif; ?>
-			
+
 			<?php if ($header_bottom) : ?>
 				<div class="clear"></div>
 				<div id="header-bottom"><?php print $header_bottom;?></div>
 			<?php endif; ?>
 
-		</div>		
+		</div>
 	</div>
 
 	<div class="clear"></div>
@@ -119,15 +121,15 @@ $(document).ready(function(){
 
 			<div id="content">
 			
-			<?php if ($content_top) : ?> 
+			<?php if ($content_top) : ?>
 				<div id="content-top"><?php print $content_top;?></div>
 			<?php endif; ?>
 
 				<?php print $breadcrumb ?>
 
-				<?php if ($title != ""): ?> 
-					<h2 class="title"><?php print $title ?></h2> 
-				<?php endif; ?> 
+				<?php if ($title != ""): ?>
+					<h2 class="title"><?php print $title ?></h2>
+				<?php endif; ?>
 
 				<?php if ($tabs != ""): ?>
 					<div id="tabs"><?php print $tabs ?></div>
@@ -139,29 +141,29 @@ $(document).ready(function(){
 
 				<?php print($content) ?>
 				
-				<?php if ($content_bottom) : ?> 
+				<?php if ($content_bottom) : ?>
 					<div id="content-bottom"><?php print $content_bottom;?></div>
 				<?php endif; ?>
-			
+
 			</div>
 
 			<?php //--------- sidebar ---------- ?>
 			<div id="content-sidebar-right">
 			
-				<?php //--- here? really? --- ?>			
+				<?php //--- here? really? --- ?>
 				<?php if ($secondary_links): ?>
 					<div id="navigation-secondary"><?php print theme('links', $secondary_links, array('class' =>'links', 'id' => 'subnavlist')) ?></div>
 				<?php endif; ?>
 			
-				<?php if ($sidebar_top) : ?> 
+				<?php if ($sidebar_top) : ?>
 					<div id="sidebar-blocks-top"><?php print $sidebar_top;?></div>
 				<?php endif; ?>
-				<?php if ($sidebar_accordion) : ?> 
+				<?php if ($sidebar_accordion) : ?>
 					<div id="sidebar-accordion"><?php print $sidebar_accordion;?></div>
 				<?php endif; ?>
 				<?php if ($sidebar_bottom) : ?> 
 					<div id="sidebar-blocks-bottom"><?php print $sidebar_bottom;?></div>
-				<?php endif; ?>	
+				<?php endif; ?>
 				
 			</div>
 
@@ -180,18 +182,17 @@ $(document).ready(function(){
 				<div class="clear"></div>
 			<?php endif; ?>
 
-			<?php if ($footer_blocks_1) : ?> 
+			<?php if ($footer_blocks_1) : ?>
 				<div id="footer-blocks-1"><?php print $footer_blocks_1;?></div>
 			<?php endif; ?>
 
-			<?php if ($footer_blocks_2) : ?> 
+			<?php if ($footer_blocks_2) : ?>
 				<div id="footer-blocks-2"><?php print $footer_blocks_2;?></div>
 			<?php endif; ?>
 			
-			<?php if ($footer_blocks_3) : ?> 
+			<?php if ($footer_blocks_3) : ?>
 				<div id="footer-blocks-3"><?php print $footer_blocks_3;?></div>
 			<?php endif; ?>
-
 
 			<?php if ($footer_bottom) : ?>
 				<div class="clear"></div>
@@ -204,7 +205,6 @@ $(document).ready(function(){
 					<br /><small>theme by [<a href="http://nood.org">noodorg</a>]</small>
 				</div>
 
-			</div>
 		</div>
 	</div>
 
@@ -214,8 +214,8 @@ $(document).ready(function(){
 	<?php if ($message_bottom) : ?> 
 		<div id="message-bottom">
 
-			<div class="close-meerkat"><?php print t('close');?></div>
-			<div class="forget-meerkat"><?php print t('forget');?></div>
+			<span class="close-meerkat"><?php print t('close');?></span>
+			<span class="forget-meerkat"><?php print t('forget');?></span>
 
 			<?php print $message_bottom;?>
 
@@ -225,6 +225,6 @@ $(document).ready(function(){
 </div>
 
 
-<?php print $closure;?> 
+<?php print $closure;?>
 </body>
 </html>
