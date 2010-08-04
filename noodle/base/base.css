@@ -121,6 +121,7 @@ pre,
 kbr {
 	background: #eee;
 	font-family: Courier, monospace;
+	border-style: none;
 }
 
 blockquote {
@@ -252,8 +253,9 @@ input.form-file {
 	padding: 3px 0px;
 	background-color: #fbfbfb;
 	border: 1px solid #ddd;
-	font: 1em/inherit inherit;
 	height: 1.21em;
+	line-height: inherit;
+	font-size: 1em;
 }
 
 textarea {
