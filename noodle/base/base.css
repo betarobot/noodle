@@ -66,6 +66,8 @@ h1 {
 	padding-top: 0.2em;
 	padding-bottom: 0.2em;
 	font-size: 2.5em;
+	font-weight: normal;
+	font-style: normal;
 }
 
 h2 {
@@ -73,6 +75,8 @@ h2 {
 	font-size: 1.7em;
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
+	font-weight: normal;
+	font-style: normal;
 }
 
 h3 {
@@ -80,6 +84,8 @@ h3 {
 	line-height: 1em;
 	padding-top: 0.4em;
 	padding-bottom: 0.4em;
+	font-weight: normal;
+	font-style: normal;
 }
 
 h4 {
@@ -87,6 +93,8 @@ h4 {
 	line-height: 1em;
 	padding-bottom: 0.5em;
 	padding-top: 0.5em;
+	font-weight: normal;
+	font-style: normal;
 }
 
 p {
@@ -248,8 +256,7 @@ span.form-required {
 }
 
 input.form-text,
-input.form-password,
-input.form-file {
+input.form-password {
 	padding: 3px 0px;
 	background-color: #fbfbfb;
 	border: 1px solid #ddd;
@@ -281,18 +288,17 @@ textarea {
 	background-color: #fdfdfd;
 }
 
-input.form-text:focus,
-input.form-password:focus,
-input.form-file:focus,
-textarea:focus {
-	border: 1px solid #aaa!important;
-	background-color: #fff;
+input.form-text,
+input.form-password {
+	width: 95%;
 }
 
-input.form-text,
-input.form-password,
 input.form-file {
-	width: 95%;
+	overflow: hidden;
+	width: auto;
+	font-size: small;
+	border: 1px solid #ddd;
+	padding: 2px 0;
 }
 
 select {
@@ -313,11 +319,11 @@ input.teaser-button {
 	height: 1.8em;
 }
 
-input.form-button:hover,
-input.form-submit:hover,
-input.form-button:focus,
-input.form-submit:focus {
-	border-color: #aaa!important;
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+	border-color: #aaa;
 }
 
 html.js input.form-autocomplete {
@@ -763,7 +769,7 @@ div.messages.warning {
 	background: #ffd5a4 url(img/messages-asterisk.png) no-repeat 7px 7px;
 }
 
-div.messages.status {
+div.messages.status, div.messages.notice {
 	padding: 0.5em 0.5em 0.5em 3em;
 	border-style: none;
 	border-bottom: 3px solid #555;
