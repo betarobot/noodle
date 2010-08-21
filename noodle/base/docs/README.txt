@@ -47,3 +47,15 @@ DIRECTORY STRUCTURE:
 ---/doc (documentation)
 --/subtheme
 ---/img (images for your theme)
+
+CUSTOM MAINTENANCE PAGE:
+
+If you want to enable theme's clean just add following snipet to your settings.php:
+
+$conf = array(
+  'maintenance_theme' => 'noodle',
+);
+
+If you already use some configuration settings you gust have to add:
+  'maintenance_theme' => 'noodle',
+

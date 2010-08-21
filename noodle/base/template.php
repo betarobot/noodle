@@ -289,3 +289,25 @@ function noodle_links($links, $attributes = array('class' => 'links')) {
     // Use the built-in theme_links() function to format the $links array.
     return theme_links($links, $attributes);
 }
+
+/**
+* Override default maintenance page.
+*/
+function noodle_preprocess_maintenance_page(&$vars, $hook) {
+	// Rewrite error message for broken database access.
+	if (!$vars['db_is_active']) {
+		$vars[content] = t('An error have occurred connecting to the he database. We are investigating the problem. Please try again later.');
+	}
+
+	// Rewrite error page title to avoid showing word drupal.
+	if (!$vars['db_is_active']) {
+		$vars['head_title'] = t('Site off-line | Closed for maintenance');
+	}
+	else {
+		$vars['head_title'] = $vars['head_title'] . t(' | Closed for maintenance');
+	}
+
+	// Add maintenance css.
+	drupal_add_css(path_to_theme().'/maintenance.css', 'theme');
+	$vars['styles'] = drupal_get_css();
+}
