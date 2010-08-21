@@ -296,7 +296,7 @@ function noodle_links($links, $attributes = array('class' => 'links')) {
 function noodle_preprocess_maintenance_page(&$vars, $hook) {
 	// Rewrite error message for broken database access.
 	if (!$vars['db_is_active']) {
-		$vars[content] = t('An error have occurred connecting to the he database. We are investigating the problem. Please try again later.');
+		$vars[content] = t('Database connection error occurred. We are investigating the problem. Please try again later.');
 	}
 
 	// Rewrite error page title to avoid showing word drupal.
