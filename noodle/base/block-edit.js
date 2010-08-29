@@ -1,3 +1,5 @@
+// $Id$
+
 Drupal.behaviors.block_edit = function (context) {
 
   var regexp = new RegExp(/block-(.+?)-(.+?)/mi);

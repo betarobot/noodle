@@ -1,3 +1,5 @@
+/* $Id$ */
+
 /*
 Theme Name: noodle
 Theme URI: http://www.nood.org/
@@ -8,21 +10,21 @@ Author URI: http://andreys.info/
 */
 
 .maintenance .maintenance-ico {
-	width: 75px;
-	height: 75px;
-	float: left;
-	padding-top: 10px;
-	padding-left: 20px;
+  width: 75px;
+  height: 75px;
+  float: left;
+  padding-top: 10px;
+  padding-left: 20px;
 }
 
 .maintenance #content-container {
-	margin-top: 5em;
-	color: #777;
+  margin-top: 5em;
+  color: #777;
 }
 
 .maintenance #footer {
-	color: #999;
-	padding-left: 110px;
-	width: 850px;
-	font-size: small;
+  color: #999;
+  padding-left: 110px;
+  width: 850px;
+  font-size: small;
 }

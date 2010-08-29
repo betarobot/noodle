@@ -1,3 +1,5 @@
+/* $Id$ */
+
 READ ME FOR NOODLE THEME (BASE THEME BY NOOD.ORG)
 
 This theme is for Drupal v.6
