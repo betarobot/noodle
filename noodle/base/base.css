@@ -407,6 +407,7 @@ body {
 #content-bottom {
   float: left;
   margin-top: 1em;
+  width: 100%;
 }
 
 #content-bottom .block {
@@ -418,10 +419,10 @@ body {
 }
 
 #content-sidebar-right {
-  width: 300px;
   float: left;
   padding-left: 15px;
   padding-right: 15px;
+  width: 300px;
 }
 
 #header-blocks-1,
@@ -659,6 +660,10 @@ li.leaf {
 #navigation-primary {
   float: right;
   padding-top: 1em;
+}
+
+#navigation-primary li, #navigation-secondary li {
+  display: inline-block;
 }
 
 ul.links,
