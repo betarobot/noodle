@@ -23,6 +23,11 @@ function noodle_preprocess_page(&$vars) {
 
   $vars['styles'] = drupal_get_css();
   $vars['scripts'] = drupal_get_js();
+  
+  if (isset($vars['node'])) {
+   // If the node type is "blog" the template suggestion will be "page-blog.tpl.php".
+   $vars['template_files'][] = 'page-'. str_replace('_', '-', $vars['node']->type);
+  }
 }
 
 /**
