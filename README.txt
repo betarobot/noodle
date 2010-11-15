@@ -1,6 +1,6 @@
 READ ME FOR NOODLE THEME (BASE THEME BY NOOD.ORG)
 
-IMPORTANT: This theme is currently in beta. Please don't use for production. Some changes may ruin your subtheme. Release is scheduled for mid August 2010.
+IMPORTANT: This theme is currently in beta. Please don't use for production. Some changes may ruin your subtheme. Release is scheduled for some time 2010.
 
 This theme is for Drupal v.6
 
