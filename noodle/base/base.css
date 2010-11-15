@@ -29,7 +29,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 .clear {
   clear: both;
   display: block;
-  overflow: hidden;
   visibility: hidden;
   width: 0;
   height: 0;
@@ -141,6 +140,14 @@ blockquote {
 
 small {
   font-size: small;
+}
+
+hr {
+  display: block;
+  clear: both;
+  height: 1px;
+  border-style: none;
+  border-bottom: 1px solid #ddd;
 }
 
 /* @group tables */
@@ -662,7 +669,8 @@ li.leaf {
   padding-top: 1em;
 }
 
-#navigation-primary li, #navigation-secondary li {
+#navigation-primary li,
+#navigation-secondary li {
   display: inline-block;
 }
 
@@ -708,13 +716,11 @@ ul.links li {
 /* @group pager */
 
 ul.pager {
-  background-color: #f7f7f7;
-  margin-left: 0;
-  margin-top: 1em;
+  background-color: #ddd;
   display: inline-block;
-  width: 100%;
   padding: 0;
-  border: 2px solid #ddd;
+  margin: 1em 0 0;
+  width: 100%;
 }
 
 .item-list .pager {
@@ -724,11 +730,19 @@ ul.pager {
 .item-list .pager li {
   margin: 0;
   padding: 0 0.3em;
+  display: inline-block;
+}
+
+.item-list .pager li.pager-current {
+  background-color: #555;
+  color: #fff;
 }
 
 /* @end */
 
-/* @group help, messages, admin */
+/* @group h
+
+elp, messages, admin */
 
 .help {
   clear: both;
@@ -878,9 +892,7 @@ div.view div.views-admin-links li a:hover {
   margin-bottom: 1em;
   font-size: small;
   display: inline-block;
-  border-left: 5px solid #ddd;
-  padding-left: 0.5em;
-  width: 98%;
+  width: 100%;
 }
 
 ul.primary {
@@ -893,10 +905,10 @@ ul.primary {
 
 ul.primary li {
   border-style: none;
-  padding: 0 5px 0 0;
   float: left;
   display: inline-block;
   margin: 2px 0;
+  padding: 0 5px 0 0;
 }
 
 ul.primary li a {
@@ -904,7 +916,7 @@ ul.primary li a {
   margin-right: 0;
   color: #fff;
   background: #aaa;
-  border: 1px solid #ddd;
+  border: 0;
   padding: 0 5px;
 }
 
@@ -917,7 +929,7 @@ ul.primary li a.active,
 ul.primary li.active a {
   background: #f60;
   color: #fff;
-  border: 1px solid #ddd;
+  border: 0;
 }
 
 ul.primary li a.active:hover {
@@ -945,8 +957,8 @@ ul.secondary li a {
   margin: 0 5px 0 0;
   color: #777;
   padding: 0 5px 0 5px;
-  background: #f7f7f7;
-  border: 1px solid #ddd;
+  background: #ddd;
+  border: 0;
 }
 
 ul.secondary li a:hover {
@@ -954,8 +966,9 @@ ul.secondary li a:hover {
 }
 
 ul.secondary li a.active {
-  color: #f60;
-  border: 1px solid #ddd;
+  color: #fff;
+  border: 0;
+  background: #f60;
 }
 
 ul.secondary li a.active:hover {
@@ -966,9 +979,13 @@ ul.secondary li a.active:hover {
 
 /* @end */
 
-/* @group node */
+/* @group
 
-.node.teaser {
+node */
+
+.node.
+
+teaser {
   margin-bottom: 2em;
   float: left;
 }
