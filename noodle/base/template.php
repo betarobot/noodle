@@ -48,11 +48,12 @@ function noodle_print_terms($node) {
   $vocabularies = taxonomy_get_vocabularies();
   foreach ($vocabularies as $vocabulary) {
     if ($terms = taxonomy_node_get_terms_by_vocabulary($node, $vocabulary->vid)) {
-      $output .= '<div>';
+      $output .= '<div class="taxonomy-voc-' . $vocabulary->vid . '">';
       $output .= '<span>' . $vocabulary->name . ': </span>';
       $output .= '<ul class="links inline">';
       foreach ($terms as $term) {
-        $output .= '<li class="taxonomy_term_' . $term->tid . '">';
+        $class = 'taxonomy-term-' . $term->tid;
+        $output .= '<li class="' . $class . '">';
         $output .= l($term->name, taxonomy_term_path($term), array('rel' => 'tag', 'title' => strip_tags($term->description)));
         $output .= '</li>';
       }
@@ -234,6 +235,7 @@ function noodle_menu_item($link, $has_children, $menu = '', $in_active_trail = F
   $class .= ' menu-' . $GLOBALS['menu_backlink'][$link]['mlid'];
   return '<li class="' . $class . '">' . $link . $menu . "</li>\n";
 }
+
 
 /**
 * Theme buttons.
