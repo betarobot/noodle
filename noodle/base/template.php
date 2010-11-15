@@ -48,14 +48,23 @@ function noodle_print_terms($node) {
   $vocabularies = taxonomy_get_vocabularies();
   foreach ($vocabularies as $vocabulary) {
     if ($terms = taxonomy_node_get_terms_by_vocabulary($node, $vocabulary->vid)) {
+      $num_terms = count($terms);
+      $i = 1;
       $output .= '<div class="taxonomy-voc-' . $vocabulary->vid . '">';
       $output .= '<span>' . $vocabulary->name . ': </span>';
       $output .= '<ul class="links inline">';
       foreach ($terms as $term) {
         $class = 'taxonomy-term-' . $term->tid;
+        if ($i == 1) {
+          $class .= ' first';
+        }
+        if ($i == $num_terms) {
+          $class .= ' last';
+        }
         $output .= '<li class="' . $class . '">';
         $output .= l($term->name, taxonomy_term_path($term), array('rel' => 'tag', 'title' => strip_tags($term->description)));
         $output .= '</li>';
+        $i++;
       }
       $output .= '</ul>';
       $output .= '</div>';
