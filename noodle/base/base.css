@@ -740,9 +740,7 @@ ul.pager {
 
 /* @end */
 
-/* @group h
-
-elp, messages, admin */
+/* @group help, messages, admin */
 
 .help {
   clear: both;
@@ -979,13 +977,9 @@ ul.secondary li a.active:hover {
 
 /* @end */
 
-/* @group
+/* @group node */
 
-node */
-
-.node.
-
-teaser {
+.node.teaser {
   margin-bottom: 2em;
   float: left;
 }
