@@ -960,7 +960,7 @@ ul.secondary li a {
 }
 
 ul.secondary li a:hover {
-  background: #ddd;
+  background: #bbb;
 }
 
 ul.secondary li a.active {
@@ -970,7 +970,7 @@ ul.secondary li a.active {
 }
 
 ul.secondary li a.active:hover {
-  color: #f60;
+  color: #ffdcbf;
 }
 
 /* @end */
