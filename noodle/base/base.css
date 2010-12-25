@@ -1206,6 +1206,7 @@ ul.secondary li a.active:hover {
   text-align: left;
   border: 1px solid #d5d5d5;
   background: #f7f7f7;
+  clear: both;
 }
 
 .content .book-navigation a {
@@ -1221,6 +1222,7 @@ ul.secondary li a.active:hover {
   text-align: left;
   border-top: none;
   border-bottom: none;
+  clear: both;
 }
 
 .book-navigation .menu {

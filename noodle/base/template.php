@@ -220,7 +220,7 @@ function noodle_tablesort_indicator($style) {
 }
 
 /**
-* Add classes to all menus.
+* Add unique class (mlid) to all menu items.
 */
 function noodle_menu_item_link($link) {
   if (empty($link['localized_options'])) {
@@ -244,7 +244,6 @@ function noodle_menu_item($link, $has_children, $menu = '', $in_active_trail = F
   $class .= ' menu-' . $GLOBALS['menu_backlink'][$link]['mlid'];
   return '<li class="' . $class . '">' . $link . $menu . "</li>\n";
 }
-
 
 /**
 * Theme buttons.

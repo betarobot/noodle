@@ -18,8 +18,10 @@
     <?php endif; ?>
   
     <div class="comment-content">
-    
-      <h2><?php print $title ?></h2>
+
+      <?php if ($title): ?>
+          <h2><?php print $title ?></h2>
+      <?php endif; ?>
   
       <?php print $content ?>
   
@@ -55,11 +57,13 @@
     <?php endif; ?>
   
     <div class="comment-content">
-    
-      <h2><?php print $title ?></h2>
-  
+
+      <?php if ($title): ?>
+          <h2><?php print $title ?></h2>
+      <?php endif; ?>
+
       <?php print $content ?>
-  
+
       <?php if ($signature): ?>
         <div class="user-signature">
           <?php print $signature ?>
