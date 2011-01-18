@@ -276,6 +276,7 @@ textarea {
   line-height: inherit;
   background-color: #fbfbfb;
   border: 1px solid #ddd;
+  clear: both;
 }
 
 .resizable-textarea {
@@ -1361,5 +1362,15 @@ ul.secondary li a.active:hover {
 }
 
 /* @end */
+
+/* @end */
+
+/* @group inline colors */
+
+.gray {
+  color: #555;
+}
+
+
 
 /* @end */
