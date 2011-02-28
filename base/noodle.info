@@ -2,7 +2,7 @@
 name = noodorg base
 description = Tableless multi-column base theme by nood.org.
 version = VERSION
-core = 6.X
+core = 6.x
 engine = phptemplate
 
 ; Stylesheets
@@ -46,6 +46,3 @@ features[] = search
 features[] = favicon
 features[] = primary_links
 features[] = secondary_links
-
-; Release information
-project = noodle
