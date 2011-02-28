@@ -1,5 +1,3 @@
-// $Id$
-
 $(document).ready(function(){
 
   // ## Foldable comment form:

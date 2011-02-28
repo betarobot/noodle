@@ -1,6 +1,4 @@
 <?php
-// $Id: theme-settings.php,v 1.6 2008/09/15 09:59:03 johnalbin Exp $
-
 // Include the definition of noodle_theme_get_default_settings().
 include_once './' . drupal_get_path('theme', 'noodle') . '/template.theme-registry.inc';
 

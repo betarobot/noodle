@@ -1,5 +1,3 @@
-<?php // $Id$ ?>
-
 <?php if ($content): ?>
   <div id="comments">
     <?php if ($node->type != 'forum'): ?>

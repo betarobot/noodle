@@ -1,5 +1,3 @@
-/* $Id$ */
-
 /*
 Theme Name: noodle
 Theme URI: http://www.nood.org/
@@ -29,6 +27,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 .clear {
   clear: both;
   display: block;
+  content: ' ';
   visibility: hidden;
   width: 0;
   height: 0;
@@ -611,7 +610,6 @@ li.leaf {
 }
 
 #footer-bottom ul.menu li a {
-  font-weight: bold;
   border-right: 2px solid #777;
   padding-right: 4px;
   line-height: 1em;
@@ -619,6 +617,12 @@ li.leaf {
 
 #footer-bottom ul.menu li.last a {
   border-right-style: none;
+  padding-right: 0;
+}
+
+#footer-bottom ul.menu li.last {
+  padding-right: 0;
+  margin-right: 0;
 }
 
 /* @end */
@@ -632,7 +636,7 @@ li.leaf {
 #message-top .block {
   border-bottom: 3px solid #ddd;
   background: #c3ffa3 url(img/messages-info.png) no-repeat 7px 1em;
-  margin-bottom: 1em;
+  margin-bottom: 0;
   border-style: none;
   border-bottom: 3px solid #555;
   padding: 0.5em 0.5em 0.5em 3em;

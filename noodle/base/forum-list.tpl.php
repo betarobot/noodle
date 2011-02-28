@@ -1,5 +1,3 @@
-<?php // $Id$ ?>
-
 <table id="forum-<?php print $forum_id; ?>">
 	<thead>
 		<tr>

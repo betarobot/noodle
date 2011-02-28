@@ -1,5 +1,3 @@
-<?php // $Id$ ?>
-
 <?php if ($tree || $has_links): ?>
   <div id="book-navigation-<?php print $book_id; ?>" class="book-navigation">
     <h3><?php print t("Navigation"); ?></h3>

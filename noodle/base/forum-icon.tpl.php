@@ -1,5 +1,3 @@
-<?php // $Id$ ?>
-
 <?php if ($new_posts): ?>
   <a name="new">
 <?php endif; ?>

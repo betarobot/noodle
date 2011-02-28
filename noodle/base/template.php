@@ -1,4 +1,4 @@
-<?php // $Id$
+<?php
 
 // let's add some additional js and css
 function noodle_preprocess_page(&$vars) {

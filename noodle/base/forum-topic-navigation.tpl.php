@@ -1,5 +1,3 @@
-<?php // $Id$ ?>
-
 <?php if ($prev || $next): ?>
   <div class="forum-topic-navigation clear-block">
     <h3><?php print t("Forum navigation"); ?></h3>

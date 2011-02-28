@@ -1,5 +1,3 @@
-<?php // $Id$ ?>
-
 <div class="comment<?php print($comment->status) ? ' comment-unpublished-wrapper' : ''; print($comment->uid == $node->uid) ? ' comment-author-wrapper' : ''; print($comment->new) ? ' comment-new' : ''; ?>">
 
   

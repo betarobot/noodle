@@ -1,5 +1,3 @@
-<?php // $Id$ ?>
-
 <?php if ($page == 0): ?>
 
   <div class="node <?php print $node->type ?> teaser<?php print($node->sticky) ? " sticky" : ""; ?><?php print($node->promote) ? " promoted" : ""; ?>">
