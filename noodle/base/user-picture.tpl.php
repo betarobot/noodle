@@ -1,6 +1,4 @@
 <?php
-
-<?php
 /**
  * If you would like remove user picture wrapper if tehre is no user picture (or gravatar) available use following code:
  *
